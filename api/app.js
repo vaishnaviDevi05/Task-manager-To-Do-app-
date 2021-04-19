@@ -311,8 +311,8 @@ app.post('/users', (req, res) => {
             let transporter = nodemailer.createTransport({
                 service:'Gmail',
                 auth: {
-                  user: 'taskmanagerremainder@gmail.com', // your email id
-                  pass: 'abc123456@', // your password
+                  user: // your email id
+                  pass:  // your password
                 },
               });
             transporter.sendMail({
@@ -395,8 +395,8 @@ app.post('/users/login' ,(req, res) => {
                     let transporter = nodemailer.createTransport({
                        service:'Gmail',
                        auth: {
-                        user: 'taskmanagerremainder@gmail.com', // your email id
-                        pass: 'abc123456@', // your password
+                        user:  // your email id
+                        pass:  // your password
                        },
                     });
                     
@@ -506,12 +506,12 @@ app.get('/sendmail/:id/:pending',authenticate,(req,res)=>{
 let transporter = nodemailer.createTransport({
     service:'Gmail',
     auth: {
-      user: 'taskmanagerremainder@gmail.com', // your email id
-      pass: 'abc123456@', //your password
+      user:  // your email id
+      pass:  //your password
     },
   });
 var mailoptions={
-    from:'taskmanagerremainder@gmail.com',
+    from: // your email id
     to:email,
     subject:'REMAINDER!!',
     text:"YOUR PENDING TASKS"+"\n"+req.params.pending
